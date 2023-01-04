@@ -80,15 +80,6 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
 
 void game() {
     char isStart = 'n';
-    std::thread t_cnt_num([](){
-        size_t size = -1;
-
-        while(clients.size() != size) {
-            printf("\n[*] There is/are %lu client(s). Shell we start the game?(y/n)",
-                   clients.size());
-            size = clients.size();
-        }
-    });
 
     while(isStart == 'n') {
         scanf("%c", &isStart);
