@@ -78,7 +78,7 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
     }
 }
 
-void game() {
+[[noreturn]] void game() {
     char isStart = 'n';
 
     while(isStart == 'n') {
