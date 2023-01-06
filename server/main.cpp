@@ -82,8 +82,11 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
     char isStart = 'n';
 
     while(isStart == 'n') {
+        printf("There is/are %lu clients, shell we start?(y/n)\n",
+               clients.size());
         scanf("%c", &isStart);
     }
+
 }
 
 [[noreturn]] void server(const int port) {
