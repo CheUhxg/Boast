@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <mutex>
 #include "../boast_msg.h"
+#include "../boast_card.h"
 
 struct BoastNode {
     int fd = -1;
@@ -80,6 +81,7 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
 
 [[noreturn]] void game() {
     char isStart = 'n';
+    std::vector<BoastCard> cards(54);
 
     while(isStart == 'n') {
         printf("There is/are %lu clients, shell we start?(y/n)\n",
