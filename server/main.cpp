@@ -88,7 +88,9 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
                clients.size());
         scanf("%c", &isStart);
     }
+    for(int i = 1; i <= 13; ++i) {
 
+    }
 }
 
 [[noreturn]] void server(const int port) {
