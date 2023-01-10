@@ -89,7 +89,7 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
         scanf("%c", &isStart);
     }
     for(int i = 1; i <= 13; ++i) {
-
+        cards[i].num = i + '0';
     }
 }
 
