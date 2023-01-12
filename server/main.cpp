@@ -88,7 +88,7 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
                clients.size());
         scanf("%c", &isStart);
     }
-    for(int i = 1; i <= 13; ++i) {
+    for(int i = 0; i < 13; ++i) {
         for(int j = 0; j < 4; ++j) {
             cards[i + j * 13].num = i + '0';
             cards[i + j * 13].color = CardColor(j);
