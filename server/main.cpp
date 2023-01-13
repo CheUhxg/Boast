@@ -94,6 +94,8 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
             cards[i + j * 13].color = CardColor(j);
         }
     }
+    cards[52].color = Spades;
+    cards[53].color = Hearts;
 }
 
 [[noreturn]] void server(const int port) {
