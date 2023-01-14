@@ -9,7 +9,7 @@ enum CardColor {
 };
 
 struct BoastCard {
-    char num = '0';
+    short num = 0;
     CardColor color = Spades;
 };
 
