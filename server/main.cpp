@@ -79,15 +79,7 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
     }
 }
 
-[[noreturn]] void game() {
-    char isStart = 'n';
-    std::vector<BoastCard> cards(54);
-
-    while(isStart == 'n') {
-        printf("There is/are %lu clients, shell we start?(y/n)\n",
-               clients.size());
-        scanf("%c", &isStart);
-    }
+void initCards(std::vector<BoastCard>& cards) {
     for(short i = 0; i < 13; ++i) {
         for(short j = 0; j < 4; ++j) {
             cards[i + j * 13].num = i + 1;
@@ -98,6 +90,19 @@ void handler(int cli_fd, const struct sockaddr_in cli_addr) {
     cards[53].color = Hearts;
     cards[52].num = 13;
     cards[53].num = 14;
+}
+
+[[noreturn]] void game() {
+    char isStart = 'n';
+    std::vector<BoastCard> cards(54);
+
+    while(isStart == 'n') {
+        printf("There is/are %lu clients, shell we start?(y/n)\n",
+               clients.size());
+        scanf("%c", &isStart);
+    }
+    initCards(cards);
+
 }
 
 [[noreturn]] void server(const int port) {
