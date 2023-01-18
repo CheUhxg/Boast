@@ -102,7 +102,7 @@ void initCards(std::vector<BoastCard>& cards) {
         scanf("%c", &isStart);
     }
     initCards(cards);
-
+    deliveCards();
 }
 
 [[noreturn]] void server(const int port) {
