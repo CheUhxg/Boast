@@ -92,6 +92,10 @@ void initCards(std::vector<BoastCard>& cards) {
     cards[53].num = 14;
 }
 
+void deliveCards() {
+
+}
+
 [[noreturn]] void game() {
     char isStart = 'n';
     std::vector<BoastCard> cards(54);
