@@ -92,7 +92,7 @@ void initCards(std::vector<BoastCard>& cards) {
     cards[53].num = 14;
 }
 
-void deliveCards() {
+void deliveCards(std::vector<BoastCard>& cards) {
 
 }
 
@@ -106,7 +106,7 @@ void deliveCards() {
         scanf("%c", &isStart);
     }
     initCards(cards);
-    deliveCards();
+    deliveCards(cards);
 }
 
 [[noreturn]] void server(const int port) {
