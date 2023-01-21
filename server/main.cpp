@@ -93,7 +93,7 @@ void initCards(std::vector<BoastCard>& cards) {
 }
 
 void deliveCards(std::vector<BoastCard>& cards) {
-
+    return;
 }
 
 [[noreturn]] void game() {
