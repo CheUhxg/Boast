@@ -93,6 +93,9 @@ void initCards(std::vector<BoastCard>& cards) {
 }
 
 void deliveCards(std::vector<BoastCard>& cards) {
+    for(auto card : cards) {
+
+    }
     return;
 }
 
